@@ -6,8 +6,9 @@ cache:
     - target/
 
 build:
-  stage: build
+  stage: build  
   script:
+    - $MAVEN_HOME/bin/mvn clean
     - mvn $MAVEN_CLI_OPTS compile
 
 test:
