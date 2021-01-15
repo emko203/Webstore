@@ -1,0 +1,8 @@
+.inner-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows: min-content;
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+	/* grid-template-areas: ; */
+}
