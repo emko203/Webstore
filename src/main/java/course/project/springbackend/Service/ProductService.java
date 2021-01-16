@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 @Transactional
 public class ProductService {
+
     @Autowired
     private ProductRepository productRepository;
 
@@ -21,7 +22,6 @@ public class ProductService {
     public void saveProduct(Product product){
         productRepository.save(product);
     }
-
 
     public Product getProduct(long productID){
         return productRepository.findById(productID).get();

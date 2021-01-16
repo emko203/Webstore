@@ -13,17 +13,6 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "productID=" + productID +
-                ", name='" + name + '\'' +
-                ", price='" + price + '\'' +
-                ", image='" + image + '\'' +
-                ", description='" + description + '\'' +
-                '}';
-    }
-
     @Column(name = "price")
     private String price;
 
@@ -64,4 +53,27 @@ public class Product {
     public String getDescription() { return description; }
 
     public void setDescription(String description) { this.description = description; }
+
+    public Product(Long productID, String name, String price, String image, String description) {
+        this.productID = productID;
+        this.name = name;
+        this.price = price;
+        this.image = image;
+        this.description = description;
+    }
+
+    public Product() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "productID=" + productID +
+                ", name='" + name + '\'' +
+                ", price='" + price + '\'' +
+                ", image='" + image + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
